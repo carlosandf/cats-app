@@ -10,8 +10,7 @@ export default class Item {
   renderItem(data) {
     this.itemContainer.classList.add('item-container')
     this.itemContainer.appendChild(this.figure);
-    this.itemContainer.appendChild(this.button)
-    this.button.innerText='Añadir a Favoritos';
+    this.itemContainer.appendChild(this.button);
     this.figure.classList.add("img-main-container");
     this.img.src = data.url;
     this.figure.appendChild(this.img);
