@@ -1,6 +1,5 @@
-const modal = document.createElement("div");
-
-const showModal = (container) => {
+function showModal(container) {
+  const modal = document.createElement("div");
   modal.classList.add("modal");
   modal.classList.add("toggle");
   container.appendChild(modal);
@@ -15,7 +14,7 @@ const showModal = (container) => {
   return modal;
 };
 
-const showImages = (container, img) => {
+function showImages(container, img) {
   const element = showModal(container);
   const childImg = document.createElement("img");
   const figure = document.createElement("figure");
