@@ -130,7 +130,7 @@ button:active {
 .main-container {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fiLL, 215px);
+  grid-template-columns: repeat(auto-fit, 215px);
   grid-auto-rows: 280px;
   gap: 9px;
   place-items: center;
@@ -150,7 +150,7 @@ button:active {
 .uploading-form {
   width: 80%;
   display: grid;
-  grid-template-rows: repeat(auto-fill, 80px);
+  grid-template-rows: repeat(auto-fit, 80px);
   grid-template-columns: 100%;
   gap: 5px;
 }
@@ -191,7 +191,7 @@ button:active {
 @media (max-width: 490px) {
 
   .main-container {
-    grid-template-columns: repeat(auto-fiLL, 190px);
+    grid-template-columns: repeat(auto-fit, 190px);
     grid-auto-rows: 270px;
   }
   .img-main-container {
@@ -202,7 +202,7 @@ button:active {
 @media (max-width: 440px) {
 
   .main-container {
-    grid-template-columns: repeat(auto-fiLL, 180px);
+    grid-template-columns: repeat(auto-fit, 180px);
     grid-auto-rows: 260px;
   }
   .img-main-container {
@@ -213,7 +213,7 @@ button:active {
 @media (max-width: 415px) {
 
   .main-container {
-    grid-template-columns: repeat(auto-fiLL, 170px);
+    grid-template-columns: repeat(auto-fit, 170px);
     grid-auto-rows: 250px;
   }
   .img-main-container {
@@ -224,7 +224,7 @@ button:active {
 @media (max-width: 395px) {
 
   .main-container {
-    grid-template-columns: repeat(auto-fiLL, 160px);
+    grid-template-columns: repeat(auto-fit, 160px);
     grid-auto-rows: 260px;
   }
   .img-main-container {
@@ -235,7 +235,7 @@ button:active {
 @media (max-width: 375px) {
 
   .main-container {
-    grid-template-columns: repeat(auto-fiLL, 150px);
+    grid-template-columns: repeat(auto-fit, 150px);
     grid-auto-rows: 250px;
   }
   .img-main-container {
@@ -246,7 +246,7 @@ button:active {
 @media (max-width: 355px) {
 
   .main-container {
-    grid-template-columns: repeat(auto-fiLL, 310px);
+    grid-template-columns: repeat(auto-fit, 310px);
     grid-auto-rows: 280px;
   }
   .img-main-container {
