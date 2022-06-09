@@ -12,9 +12,23 @@
       <header>
         <h1>Cat Random App</h1>
       </header>
-      <span id="error"></span>
+      <div class="error-message__container">
+        <span id="error" class="error"></span>
+      </div>
       <section id="random" class="container"></section> 
+      <section id="uploadingItem" class="container">
+        <div>
+          <h2>Sube la foto de tu gato!!!</h2>
+        </div>
+
+        <form id="uploadingForm">
+          <input id="file" type="file" name="file">
+          <button id="btnSubmit" type="button">Subir Foto</button>
+        </form>
+      </section>
       <section id="favourites" class="container"></section>
+      
+      
       <button class="button-reload" type="button">Reload</button>    
     </div>
     <script type="module" src="./src/index.js"></script>

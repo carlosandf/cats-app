@@ -15,6 +15,19 @@ header {
   display: flex;
   justify-content: center;
 }
+.error-message__container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.error {
+  display: none;
+  font-size: larger;
+  background-color: red;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
 
 .container {
   display: grid;
@@ -28,7 +41,7 @@ header {
 .main-container {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, 215px);
+  grid-template-columns: repeat(auto-fiLL, 215px);
   grid-auto-rows: 280px;
   gap: 9px;
   place-items: center;

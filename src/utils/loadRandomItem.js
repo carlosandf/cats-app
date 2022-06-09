@@ -3,9 +3,9 @@ import Item from "../Class/Item.js";
 import saveFavouriteItem from "./saveFavouriteItem.js";
 import loadFavouriteItem from "./loadFavouriteItem.js";
 const mainContainer = document.querySelector('.main');
+const error = document.getElementById('error');
 
-const API_KEY = "api_key=5f090e7b-2af0-4179-9ecc-42922dd48df4";
-const URL_API_RANDOM = `https://api.thecatapi.com/v1/images/search?limit=4&${API_KEY}`;
+const URL_API_RANDOM = `https://api.thecatapi.com/v1/images/search?limit=4`;
 
 async function loadRandomItem () {
   
@@ -13,8 +13,8 @@ async function loadRandomItem () {
   const data = await resp.json();
 
   if (resp.status !== 200) {
-    console.log('err', resp);
-    error.innerText = 'Hubo un error: ' + resp.status;
+    error.style.display = 'block';
+    error.innerText = `Hubo un error ${resp.status} ${data.message}`;
   } else {
     const random = document.getElementById('random')
     const randomItemContainer = document.createElement('div');
@@ -32,8 +32,7 @@ async function loadRandomItem () {
       element.button.addEventListener('click', () => {
         saveFavouriteItem(item.id);
         loadFavouriteItem();
-      })
-
+      });
       element.figure.addEventListener("click", () => {
           showImages(mainContainer, element.img);
       });
@@ -41,4 +40,4 @@ async function loadRandomItem () {
     random.appendChild(randomItemContainer)
   }
 };
-export default loadRandomItem
+export default loadRandomItem;
