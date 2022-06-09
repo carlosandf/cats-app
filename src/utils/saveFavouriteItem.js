@@ -1,6 +1,6 @@
 import loadFavouriteItem from "./loadFavouriteItem.js";
-const error = document.getElementById('error');
-
+import Message from "./message.js";
+const messageContainer = document.getElementById('messageContainer');
 const URL_API_FAV = `https://api.thecatapi.com/v1/favourites/`;
 
 export default async function saveFavouriteItem(id) {
@@ -17,10 +17,12 @@ export default async function saveFavouriteItem(id) {
   });
   const data = await resp.json();
 
-  if(resp.status !== 200) {
-    error.style.display = 'block';
-    error.innerText = `Hubo un error ${resp.status} ${data.message}`;
-  } else {
+  const message = new Message({resp, data})
+
+  try {
     loadFavouriteItem();
+  } catch (err) {
+    messageContainer.appendChild(message.contentMessage('error'));
+    console.error(err)
   }
 };

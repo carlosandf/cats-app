@@ -12,8 +12,8 @@
       <header>
         <h1>Cat Random App</h1>
       </header>
-      <div class="error-message__container">
-        <span id="error" class="error"></span>
+      <div id="messageContainer" class="message-container">
+        
       </div>
       <section id="random" class="container"></section> 
       <section id="uploadingItem" class="container">
@@ -21,8 +21,11 @@
           <h2>Sube la foto de tu gato!!!</h2>
         </div>
 
-        <form id="uploadingForm">
-          <input id="file" type="file" name="file">
+        <form id="uploadingForm" class="uploading-form">
+          <div class="file-select">
+            <label id="fileLabel" for="file" class="file-label">Seleciona o arrastra un archivo</label>
+            <input id="file" type="file" name="file">
+          </div>
           <button id="btnSubmit" type="button">Subir Foto</button>
         </form>
       </section>
